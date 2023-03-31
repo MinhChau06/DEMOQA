@@ -18,10 +18,13 @@ Access to Forms page
     Execute JavaScript               window.scrollBy(0,3000) 
     Click Element                    xpath://label[@for='gender-radio-1']
     Input Text                       xpath://input[@id="userNumber"]  0395929398
-    Clear Element Text               xpath://input[@id="dateOfBirthInput"]
-    Input Text                       xpath://input[@id="dateOfBirthInput"]  03 Mar 2001 
-    Click Element                    xpath://input[@id="hobbies-checkbox-1"]
+    Wait Until Element Is Visible    //input[@id='dateOfBirthInput']
+    Click Element                    //input[@id='dateOfBirthInput']
+    Wait Until Element Is Visible    //div[@class='react-datepicker__month-container']
+    Click Element                     //div[@class='react-datepicker__day react-datepicker__day--027']
     Input Text                       xpath://textarea[@placeholder="Current Address"]  155/5 Hoàng Văn Thụ
-    Click Button                     xpath://button[@id="submit"]
+    Execute JavaScript               document.getElementById("fixedban").remove();
+    Execute JavaScript               document.querySelector("footer").remove();
+    Click Element                     xpath://button[@type='submit']
     Click Button                     xpath://button[@id="closeLargeModal"]
           
