@@ -18,13 +18,20 @@ Access to Forms page
     Execute JavaScript               window.scrollBy(0,3000) 
     Click Element                    xpath://label[@for='gender-radio-1']
     Input Text                       xpath://input[@id="userNumber"]  0395929398
-    Wait Until Element Is Visible    //input[@id='dateOfBirthInput']
-    Click Element                    //input[@id='dateOfBirthInput']
-    Wait Until Element Is Visible    //div[@class='react-datepicker__month-container']
-    Click Element                     //div[@class='react-datepicker__day react-datepicker__day--027']
+    Wait Until Element Is Visible    xpath://input[@id='dateOfBirthInput']
+    Click Element                    xpath://input[@id='dateOfBirthInput']
+    Wait Until Element Is Visible    xpath://div[@class='react-datepicker__month-container']
+    Click Element                    xpath://div[@class='react-datepicker__day react-datepicker__day--027'] 
+    Input Text                       xpath://input[@id='subjectsInput']  student
+    Click Element                    xpath://label[@for='hobbies-checkbox-1']
+    Choose File                      xpath://input[@id='uploadPicture']  D:/DEMOrobotframework/mchau.jpg
     Input Text                       xpath://textarea[@placeholder="Current Address"]  155/5 Hoàng Văn Thụ
     Execute JavaScript               document.getElementById("fixedban").remove();
     Execute JavaScript               document.querySelector("footer").remove();
-    Click Element                     xpath://button[@type='submit']
-    Click Button                     xpath://button[@id="closeLargeModal"]
+    Click Element                    xpath://div[contains(text(), 'Select State')]
+    Click Element                    xpath://div[contains(text(), 'NCR')]
+    Click Element                    xpath://div[contains(text(), 'Select City')]
+    Click Element                    xpath://div[contains(text(), 'Delhi')]
+    Click Element                    xpath://button[@type='submit']
+    Click Element                    xpath://button[@id="closeLargeModal"]
           
