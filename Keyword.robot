@@ -13,22 +13,22 @@ Input form
     Click Element                  ${practiceForm}
     Input Text                     ${inputFirstName}  Nguyễn
     Input Text                     ${inputLastName}  Châu
-    Input Text                     ${inputEmail}  mchau3801@gmail.com
+    Input Text                     ${inputEmail}  ${studentEmail}
     Wait Until Element Is Visible  ${clickGender}
     Execute JavaScript             window.scrollBy(0,3000) 
     Click Element                  ${clickGender}
-    Input Text                     ${inputMobile}  0395929398
+    Input Text                     ${inputMobile}  ${Mobile}
     Wait Until Element Is Visible  ${selectdob}
     Click Element                  ${selectdob}
     Wait Until Element Is Visible  ${Wait Until Element Is Visible}
     Click Element                  ${selectday}
-    Input Text                     ${inputSubjects}  English
+    Input Text                     ${inputSubjects}  ${Subject}
     Press Keys                     ${inputSubjects}  RETURN
     Execute JavaScript             document.getElementById("fixedban").remove();
     Execute JavaScript             document.querySelector("footer").remove();
     Click Element                  ${clickHobbies}
     Choose File                    ${choosefile}  D:/DEMOrobotframework/mchau.jpg
-    Input Text                     ${inputAddress}  155/5 Hoàng Văn Thụ
+    Input Text                     ${inputAddress}  ${Address}
     Click Element                  ${selectState}
     Click Element                  ${clickState}
     Click Element                  ${selectCity}
