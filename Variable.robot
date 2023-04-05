@@ -9,7 +9,9 @@ ${clickGender}                    xpath=//label[@for='gender-radio-1']
 ${inputMobile}                    xpath=//input[@id="userNumber"]
 ${selectdob}                      xpath=//input[@id='dateOfBirthInput']
 ${Wait Until Element Is Visible}  xpath=//div[@class='react-datepicker__month-container']
-${selectday}                      xpath=//div[@class='react-datepicker__day react-datepicker__day--027'] 
+${selectday}                      xpath=//div[@class='react-datepicker__day react-datepicker__day--003']
+${selectmonth}                    xpath//select[@class="react-datepicker__month-select"]
+${selectyear}                     xpath//select[@class="react-datepicker__year-select"]
 ${inputSubjects}                  xpath=//input[@id='subjectsInput']  
 ${clickHobbies}                   xpath=//label[@for='hobbies-checkbox-1']
 ${choosefile}                     xpath=//input[@id='uploadPicture']  
@@ -18,8 +20,8 @@ ${selectState}                    xpath=//div[contains(text(), 'Select State')]
 ${clickState}                     xpath=//div[contains(text(), 'NCR')]
 ${selectCity}                     xpath=//div[contains(text(), 'Select City')]
 ${clickCity}                      xpath=//div[contains(text(), 'Delhi')]
-${submit}                         xpath://button[@type='submit']
-${close}                          xpath://button[@id="closeLargeModal"]
+${submit}                         xpath=//button[@type='submit']
+${close}                          xpath=//button[@id="closeLargeModal"]
 #Get Text
 ${gtextName}      xpath=//td[text()='Student Name']/following-sibling::td
 ${gtextEmail}     xpath=//td[text()='Student Email']/following-sibling::td
@@ -36,7 +38,7 @@ ${studentName}    Nguyễn Châu
 ${studentEmail}   mchau3801@gmail.com
 ${Gender}         Male
 ${Mobile}         0395929398
-${DateofBirth}    27 April,2023
+${DateofBirth}    03 August,2001
 ${Subject}        English 
 ${Hobbies}        Sports
 ${Picture}        mchau.jpg

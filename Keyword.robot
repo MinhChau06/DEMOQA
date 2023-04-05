@@ -21,7 +21,11 @@ Input form
     Wait Until Element Is Visible  ${selectdob}
     Click Element                  ${selectdob}
     Wait Until Element Is Visible  ${Wait Until Element Is Visible}
-    Click Element                  ${selectday}
+    Click Element                  ${selectmonth}
+    Press Keys                     ${selectmonth}  August
+    Click Element                  ${selectyear}
+    Press Keys                     ${selectyear}  2001
+    Click Element                  ${selectday}     
     Input Text                     ${inputSubjects}  ${Subject}
     Press Keys                     ${inputSubjects}  RETURN
     Execute JavaScript             document.getElementById("fixedban").remove();
@@ -35,23 +39,23 @@ Input form
     Click Element                  ${clickCity}
     
 Verify Form
-    ${actualResult}=    Get Text    //td[text()='Student Name']/following-sibling::td
-    Should Be Equal    ${actualResult}    ${studentName}
-    ${actualResult}=    Get Text    //td[text()='Student Email']/following-sibling::td
-    Should Be Equal    ${actualResult}    ${studentEmail}
-    ${actualResult}=    Get Text    //td[text()='Gender']/following-sibling::td
-    Should Be Equal    ${actualResult}    ${Gender}
-    ${actualResult}=    Get Text    //td[text()='Mobile']/following-sibling::td
-    Should Be Equal    ${actualResult}    ${Mobile}
-    ${actualResult}=    Get Text    //td[text()='Date of Birth']/following-sibling::td
-    Should Be Equal    ${actualResult}    ${DateofBirth}
-    ${actualResult}=    Get Text    //td[text()='Subjects']/following-sibling::td
-    Should Be Equal    ${actualResult}    ${Subject}
-    ${actualResult}=    Get Text    //td[text()='Hobbies']/following-sibling::td
-    Should Be Equal    ${actualResult}    ${Hobbies}
-    ${actualResult}=    Get Text    //td[text()='Picture']/following-sibling::td
-    Should Be Equal    ${actualResult}    ${Picture}
-    ${actualResult}=    Get Text    //td[text()='Address']/following-sibling::td
-    Should Be Equal    ${actualResult}    ${Address}
-    ${actualResult}=    Get Text    //td[text()='State and City']/following-sibling::td
-    Should Be Equal    ${actualResult}    ${State&City}
+    ${actualResult}=  Get Text         ${gtextName}
+    Should Be Equal   ${actualResult}  ${studentName}
+    ${actualResult}=  Get Text         ${gtextEmail}
+    Should Be Equal   ${actualResult}  ${studentEmail}
+    ${actualResult}=  Get Text         ${gtextGender}
+    Should Be Equal   ${actualResult}  ${Gender}
+    ${actualResult}=  Get Text         ${gtextMobile}
+    Should Be Equal   ${actualResult}  ${Mobile}
+    ${actualResult}=  Get Text         ${gtextDoB}
+    Should Be Equal   ${actualResult}  ${DateofBirth}
+    ${actualResult}=  Get Text         ${gtextSubjects}
+    Should Be Equal   ${actualResult}  ${Subject}
+    ${actualResult}=  Get Text         ${gtextHobbies}
+    Should Be Equal   ${actualResult}  ${Hobbies}
+    ${actualResult}=  Get Text         ${gtextPicture}
+    Should Be Equal   ${actualResult}  ${Picture}
+    ${actualResult}=  Get Text         ${gtextAddress}
+    Should Be Equal   ${actualResult}  ${Address}
+    ${actualResult}=  Get Text         ${gtextSaC}
+    Should Be Equal   ${actualResult}  ${State&City}
