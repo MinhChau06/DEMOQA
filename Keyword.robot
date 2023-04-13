@@ -26,25 +26,27 @@ Register to Book Store
     Wait Until Element Is Visible  ${clickiFrame}
     Execute JavaScript             window.scrollBy(0,3000)
     Click Element                  ${clickiFrame}
-    sleep  15s
+    sleep  20s
     Wait Until Element Is Visible  ${BtRegister}
     Execute JavaScript             window.scrollBy(0,3000)
-    Click Element                  ${BtRegister}  
+    Click Element                  ${BtRegister} 
+    Sleep  1s 
 verify Register
-    sleep  1s
     ${message}=  Handle Alert  action=ACCEPT
     Should Be Equal    ${message}    ${exAlertMessage}
-
+    sleep  2s
 
 login   
     Click Element       ${login}
     Input Text          ${inputUsernameL}  ${userName}
     Input Text          ${inputPasswordL}  ${Password}
-    Sleep    2s
+    sleep  2s
     Click Button        ${BtLogin}
+    Sleep  2s
 verify login
     ${actualResult}=  Get Text         ${gtextUserName}
     Should Be Equal   ${actualResult}  ${userName}
+    sleep  2s
     
 Access Forms
     Maximize Browser Window
@@ -102,3 +104,9 @@ Verify Form
     Should Be Equal   ${actualResult}  ${Address}
     ${actualResult}=  Get Text         ${gtextSaC}
     Should Be Equal   ${actualResult}  ${State&City}
+    sleep  2s
+
+
+#robot -d Results -i Register DEMOQA.robot: chạy 1 test case với tag
+#robot -d Results -i demoQA DEMOQA.robot : chạy 1 test suite với tag
+
