@@ -34,6 +34,7 @@ ${selectCity}       xpath=//div[contains(text(), 'Select City')]
 ${clickCity}        xpath=//div[contains(text(), 'Delhi')]
 ${submit}           xpath=//button[@type='submit']
 ${close}            xpath=//button[@id="closeLargeModal"]
+${mainPage}         xpath=//a[@href="https://demoqa.com"]
 #Get Text
 ${gtextName}      xpath=//td[text()='Student Name']/following-sibling::td
 ${gtextEmail}     xpath=//td[text()='Student Email']/following-sibling::td
@@ -57,6 +58,6 @@ ${Hobbies}         Sports
 ${Picture}         mchau.jpg
 ${Address}         155/5 Hoàng Văn Thụ
 ${State&City}      NCR Delhi
-${userName}        mchau3801
+${userName}        mchau3802
 ${Password}        Mchau06@
 ${exAlertMessage}  User Register Successfully.

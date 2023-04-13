@@ -5,10 +5,11 @@ Resource    Variable.robot
 *** Keywords ***
 Suite Setup
     Open Browser    https://demoqa.com/    chrome
-    Access Book Store Application
+    Maximize Browser Window
 
 Access Book Store Application
-    Maximize Browser Window
+    Wait Until Element Is Visible  ${mainPage}
+    Click Element                  ${mainPage}
     Wait Until Element Is Visible  ${BookStoreApplication}
     Execute JavaScript             window.scrollBy(0,3000)
     Click Element                  ${BookStoreApplication}
@@ -49,7 +50,6 @@ verify login
     sleep  2s
     
 Access Forms
-    Maximize Browser Window
     Wait Until Element Is Visible  ${form}
     Execute JavaScript             window.scrollBy(0,3000)
     Click Element                  ${form}
