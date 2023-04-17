@@ -48,11 +48,16 @@ ${gtextAddress}   xpath=//td[text()='Address']/following-sibling::td
 ${gtextSaC}       xpath=//td[text()='State and City']/following-sibling::td
 ${gtextUserName}  xpath=//label[@id="userName-value"]
 # Values
-${studentName}     Nguyễn Châu
+${FName}           Nguyễn
+${LName}           Châu
+${StudentName}     ${FName}${SPACE}${LName}
 ${studentEmail}    mchau3801@gmail.com
 ${Gender}          Male
 ${Mobile}          0395929398
-${DateofBirth}     03 August,2001
+${D}               03
+${M}               August
+${Y}               2001
+${D M Y}           ${D}${SPACE}${M}${SPACE}${Y}
 ${Subject}         English 
 ${Hobbies}         Sports
 ${Picture}         mchau.jpg
@@ -60,4 +65,7 @@ ${Address}         155/5 Hoàng Văn Thụ
 ${State&City}      NCR Delhi
 ${userName}        mchau3802
 ${Password}        Mchau06@
+${LinkPic}         D:/DEMOrobotframework/mchau.jpg
 ${exAlertMessage}  User Register Successfully.
+@{fields}  ${gtextName} ${gtextGender} ${gtextMobile} ${gtextDoB} ${gtextSubjects} ${gtextHobbies} ${gtextPicture} ${gtextAddress} ${gtextSaC}
+@{values}  ${StudentName} ${Gender} ${Mobile} ${D M Y} ${Subject} ${Hobbies} ${Picture} ${Address} ${State&City}

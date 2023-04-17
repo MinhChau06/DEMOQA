@@ -19,12 +19,12 @@ Register
     [Tags]    Register    demoQA
     Access Book Store Application
     Register to Book Store
-    verify Register
+    Verify Register
 
 Login
     [Tags]    Login    demoQA
-    login
-    verify login
-    Page Should Contain Element    ${BtLogout}
+    Login
+    Verify login
+    Click Element   ${BtLogout}
 
     
