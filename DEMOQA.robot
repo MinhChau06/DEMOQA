@@ -11,9 +11,7 @@ Access to Forms page
     [Tags]    practiceform    demoQA 
     Access Forms
     Input form
-    Click Element  ${submit}
     Verify Form
-    Click Element  ${close}
     
 Register
     [Tags]    Register    demoQA
@@ -25,6 +23,4 @@ Login
     [Tags]    Login    demoQA
     Login
     Verify login
-    Click Element   ${BtLogout}
-
     

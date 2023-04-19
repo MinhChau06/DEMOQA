@@ -8,109 +8,103 @@ Suite Setup
     Maximize Browser Window
 
 Access Book Store Application
-    Wait Until Element Is Visible  ${mainPage}
-    Click Element                  ${mainPage}
-    Wait Until Element Is Visible  ${BookStoreApplication}
+    Wait Until Element Is Visible  ${MainPage}
+    Click Element                  ${MainPage}
+    Wait Until Element Is Visible  ${BSA}
     Execute JavaScript             window.scrollBy(0,3000)
-    Click Element                  ${BookStoreApplication}
-    Sleep  3s
+    Click Element                  ${BSA}
 Register to Book Store
     Execute JavaScript             document.getElementById("fixedban").remove();
     Execute JavaScript             document.querySelector("footer").remove();
-    Click Element                  ${login}
+    Click Element                  ${Login}
     Click Element                  ${NewUser}
-    Input Text                     ${inputFirstNameR}  ${FName}
-    Input Text                     ${inputLastNameR}   ${FName}
-    Input Text                     ${inputUsernameR}   ${userName}
-    Input Password                 ${inputPasswordR}   ${Password}
+    Input Text                     ${InputFirstNameR}  ${FName}
+    Input Text                     ${InputLastNameR}   ${LName}
+    Input Text                     ${InputUsernameR}   ${UserName}
+    Input Password                 ${InputPasswordR}   ${Password}
     Sleep  2s
-    Wait Until Element Is Visible  ${clickiFrame}
+    Wait Until Element Is Visible  ${ClickiFrame}
     Execute JavaScript             window.scrollBy(0,3000)
-    Click Element                  ${clickiFrame}
+    Click Element                  ${ClickiFrame}
     Sleep  20s
     Wait Until Element Is Visible  ${BtRegister}
     Execute JavaScript             window.scrollBy(0,3000)
     Click Element                  ${BtRegister} 
-    Sleep  1s 
 Verify Register
-    ${message}=  Handle Alert  action=ACCEPT
-    Should Be Equal    ${message}    ${exAlertMessage}
+    ${Message}=  Handle Alert  action=ACCEPT
+    Should Be Equal    ${Message}    ${ExAlertMessage}
     Sleep  2s
 
 Login   
-    Click Element       ${login}
-    Input Text          ${inputUsernameL}  ${userName}
-    Input Text          ${inputPasswordL}  ${Password}
+    Click Element       ${Login}
+    Input Text          ${InputUsernameL}  ${UserName}
+    Input Text          ${InputPasswordL}  ${Password}
     Sleep  2s
     Click Button        ${BtLogin}
-    Sleep  2s
+    Sleep  5s
 Verify login
-    ${actualResult}=  Get Text         ${gtextUserName}
-    Should Be Equal   ${actualResult}  ${userName}
+    ${ActualResult}=  Get Text         ${GtextUserName}
+    Should Be Equal   ${ActualResult}  ${UserName}
     Sleep  2s
     
 Access Forms
-    Wait Until Element Is Visible  ${form}
+    Wait Until Element Is Visible  ${Form}
     Execute JavaScript             window.scrollBy(0,3000)
-    Click Element                  ${form}
+    Click Element                  ${Form}
 
 Input form
-    Click Element                  ${practiceForm}
-    Input Text                     ${inputFirstNameF}  ${FName}
-    Input Text                     ${inputLastNameF}   ${LName}
-    Input Text                     ${inputEmail}       ${studentEmail}
-    Wait Until Element Is Visible  ${clickGender}
+    Click Element                  ${PracticeForm}
+    Input Text                     ${InputFirstNameF}  ${FName}
+    Input Text                     ${InputLastNameF}   ${LName}
+    Input Text                     ${InputEmail}       ${StudentEmail}
+    Wait Until Element Is Visible  ${ClickGender}
     Execute JavaScript             window.scrollBy(0,3000) 
-    Click Element                  ${clickGender}
-    Input Text                     ${inputMobile}      ${Mobile}
-    Wait Until Element Is Visible  ${selectdob}
-    Click Element                  ${selectdob}
-    Wait Until Element Is Visible  ${WUEIV}
-    Click Element                  ${selectmonth}
-    Press Keys                     ${selectmonth}      ${M}
-    Click Element                  ${selectyear}
-    Press Keys                     ${selectyear}       ${Y}
-    Click Element                  ${selectday}     
-    Input Text                     ${inputSubjects}    ${Subject}
-    Press Keys                     ${inputSubjects}  RETURN
+    Click Element                  ${ClickGender}
+    Input Text                     ${InputMobile}      ${Mobile}
+    Wait Until Element Is Visible  ${Selectdob}
+    Click Element                  ${Selectdob}
+    Wait Until Element Is Visible  ${Wait}
+    Click Element                  ${Selectmonth}
+    Press Keys                     ${Selectmonth}      ${M}
+    Click Element                  ${Selectyear}
+    Press Keys                     ${Selectyear}       ${Y}
+    Click Element                  ${Selectday}     
+    Input Text                     ${InputSubjects}    ${Subject}
+    Press Keys                     ${InputSubjects}  RETURN
     Execute JavaScript             document.getElementById("fixedban").remove();
     Execute JavaScript             document.querySelector("footer").remove();
-    Click Element                  ${clickHobbies}
-    Choose File                    ${choosefile}       ${LinkPic}
-    Input Text                     ${inputAddress}     ${Address}
-    Click Element                  ${selectState}
-    Click Element                  ${clickState}
-    Click Element                  ${selectCity}
-    Click Element                  ${clickCity}
+    Click Element                  ${ClickHobbies}
+    Choose File                    ${Choosefile}       ${LinkPic}
+    Input Text                     ${InputAddress}     ${Address}
+    Click Element                  ${SelectState}
+    Click Element                  ${ClickState}
+    Click Element                  ${SelectCity}
+    Click Element                  ${ClickCity}
+    Click Element                  ${submit}
     
 Verify Form
-    FOR    ${index}    IN RANGE    0    ${fields.__len__()}
-        ${fields}=    Set Variable    ${fields[${index}]}
-        ${expectedValue}=    Set Variable    ${values[${index}]}
-        ${actualResult}=    Get Text    ${fields}
-        Should Be Equal    ${actualResult}    ${expectedValue}
-    END
-    # ${actualResult}=  Get Text         ${gtextName}
-    # Should Be Equal   ${actualResult}  ${FName} ${LName}
-    # ${actualResult}=  Get Text         ${gtextEmail}
-    # Should Be Equal   ${actualResult}  ${studentEmail}
-    # ${actualResult}=  Get Text         ${gtextGender}
-    # Should Be Equal   ${actualResult}  ${Gender}
-    # ${actualResult}=  Get Text         ${gtextMobile}
-    # Should Be Equal   ${actualResult}  ${Mobile}
-    # ${actualResult}=  Get Text         ${gtextDoB}
-    # Should Be Equal   ${actualResult}  ${D} ${M} ${Y}
-    # ${actualResult}=  Get Text         ${gtextSubjects}
-    # Should Be Equal   ${actualResult}  ${Subject}
-    # ${actualResult}=  Get Text         ${gtextHobbies}
-    # Should Be Equal   ${actualResult}  ${Hobbies}
-    # ${actualResult}=  Get Text         ${gtextPicture}
-    # Should Be Equal   ${actualResult}  ${Picture}
-    # ${actualResult}=  Get Text         ${gtextAddress}
-    # Should Be Equal   ${actualResult}  ${Address}
-    # ${actualResult}=  Get Text         ${gtextSaC}
-    # Should Be Equal   ${actualResult}  ${State&City}
-    # Sleep  2s
+    ${actualResult}=  Get Text         ${gtextName}
+    Should Be Equal   ${actualResult}  ${StudentName}
+    ${actualResult}=  Get Text         ${gtextEmail}
+    Should Be Equal   ${actualResult}  ${studentEmail}
+    ${actualResult}=  Get Text         ${gtextGender}
+    Should Be Equal   ${actualResult}  ${Gender}
+    ${actualResult}=  Get Text         ${gtextMobile}
+    Should Be Equal   ${actualResult}  ${Mobile}
+    ${actualResult}=  Get Text         ${gtextDoB}
+    Should Be Equal   ${actualResult}  ${DoB}
+    ${actualResult}=  Get Text         ${gtextSubjects}
+    Should Be Equal   ${actualResult}  ${Subject}
+    ${actualResult}=  Get Text         ${gtextHobbies}
+    Should Be Equal   ${actualResult}  ${Hobbies}
+    ${actualResult}=  Get Text         ${gtextPicture}
+    Should Be Equal   ${actualResult}  ${Picture}
+    ${actualResult}=  Get Text         ${gtextAddress}
+    Should Be Equal   ${actualResult}  ${Address}
+    ${actualResult}=  Get Text         ${gtextSaC}
+    Should Be Equal   ${actualResult}  ${State&City}
+    Sleep  2s
+    Click Element     ${Close}
 
 
 #robot -d Results -i Register practiceform DEMOQA.robot: chạy 1 test case với tag

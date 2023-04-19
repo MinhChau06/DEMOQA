@@ -1,71 +1,71 @@
 *** Variables ***
-${BookStoreApplication}  xpath=//h5[text()='Book Store Application']
-${login}                 xpath=//span[contains(text(),'Login')]
-${NewUser}               xpath=//button[text()='New User'] 
-${inputUsernameR}        xpath=//input[@id="userName"]
-${inputPasswordR}        xpath=//input[@id="password"]
-${clickiFrame}           xpath=//iframe[@title='reCAPTCHA']
-${BtRegister}            xpath=//button[@id='register']              
-${inputFirstNameR}       xpath=//input[@id="firstname"]
-${inputLastNameR}        xpath=//input[@id="lastname"]
-${inputUsernameL}        xpath=//input[@placeholder="UserName"]
-${inputPasswordL}        xpath=//input[@placeholder="Password"]
-${BtLogin}               xpath=//button[@id="login"]
-${BtLogout}              xpath=//button[contains(text(), 'Log out')]
-${form}             xpath=//h5[text()='Forms']
-${practiceForm}     xpath=//span[contains(text(),'Practice Form')]
-${inputFirstNameF}  xpath=//input[@id="firstName"]
-${inputLastNameF}   xpath=//input[@id="lastName"]
-${inputEmail}       xpath=//input[@id="userEmail"]
-${clickGender}      xpath=//label[@for='gender-radio-1']
-${inputMobile}      xpath=//input[@id="userNumber"]
-${selectdob}        xpath=//input[@id='dateOfBirthInput']
-${WUEIV}            xpath=//div[@class='react-datepicker__month-container']
-${selectday}        xpath=//div[@class='react-datepicker__day react-datepicker__day--003']
-${selectmonth}      xpath=//select[@class="react-datepicker__month-select"]
-${selectyear}       xpath=//select[@class="react-datepicker__year-select"]
-${inputSubjects}    xpath=//input[@id='subjectsInput']  
-${clickHobbies}     xpath=//label[@for='hobbies-checkbox-1']
-${choosefile}       xpath=//input[@id='uploadPicture']  
-${inputAddress}     xpath=//textarea[@placeholder="Current Address"]
-${selectState}      xpath=//div[contains(text(), 'Select State')]
-${clickState}       xpath=//div[contains(text(), 'NCR')]
-${selectCity}       xpath=//div[contains(text(), 'Select City')]
-${clickCity}        xpath=//div[contains(text(), 'Delhi')]
-${submit}           xpath=//button[@type='submit']
-${close}            xpath=//button[@id="closeLargeModal"]
-${mainPage}         xpath=//a[@href="https://demoqa.com"]
+${BSA}              xpath=//h5[text()='Book Store Application']
+${Login}            xpath=//span[contains(text(),'Login')]
+${NewUser}          xpath=//button[text()='New User'] 
+${InputUsernameR}   xpath=//input[@id="userName"]
+${InputPasswordR}   xpath=//input[@id="password"]
+${ClickiFrame}      xpath=//iframe[@title='reCAPTCHA']
+${BtRegister}       xpath=//button[@id='register']              
+${InputFirstNameR}  xpath=//input[@id="firstname"]
+${InputLastNameR}   xpath=//input[@id="lastname"]
+${InputUsernameL}   xpath=//input[@placeholder="UserName"]
+${InputPasswordL}   xpath=//input[@placeholder="Password"]
+${BtLogin}          xpath=//button[@id="login"]
+${BtLogout}         xpath=//button[contains(text(),'Log out')]
+${Form}             xpath=//h5[text()='Forms']
+${PracticeForm}     xpath=//span[contains(text(),'Practice Form')]
+${InputFirstNameF}  xpath=//input[@id="firstName"]
+${InputLastNameF}   xpath=//input[@id="lastName"]
+${InputEmail}       xpath=//input[@id="userEmail"]
+${ClickGender}      xpath=//label[@for='gender-radio-1']
+${InputMobile}      xpath=//input[@id="userNumber"]
+${Selectdob}        xpath=//input[@id='dateOfBirthInput']
+${Wait}             xpath=//div[@class='react-datepicker__month-container']
+${Selectday}        xpath=//div[@class="react-datepicker__day react-datepicker__day--003"]
+${Selectmonth}      xpath=//select[@class="react-datepicker__month-select"]
+${Selectyear}       xpath=//select[@class="react-datepicker__year-select"]
+${InputSubjects}    xpath=//input[@id='subjectsInput']  
+${ClickHobbies}     xpath=//label[@for='hobbies-checkbox-1']
+${Choosefile}       xpath=//input[@id='uploadPicture']  
+${InputAddress}     xpath=//textarea[@placeholder="Current Address"]
+${SelectState}      xpath=//div[contains(text(), 'Select State')]
+${ClickState}       xpath=//div[contains(text(), 'NCR')]
+${SelectCity}       xpath=//div[contains(text(), 'Select City')]
+${ClickCity}        xpath=//div[contains(text(), 'Delhi')]
+${Submit}           xpath=//button[@type='submit']
+${Close}            xpath=//button[@id="closeLargeModal"]
+${MainPage}         xpath=//a[@href="https://demoqa.com"]
 #Get Text
-${gtextName}      xpath=//td[text()='Student Name']/following-sibling::td
-${gtextEmail}     xpath=//td[text()='Student Email']/following-sibling::td
-${gtextGender}    xpath=//td[text()='Gender']/following-sibling::td
-${gtextMobile}    xpath=//td[text()='Mobile']/following-sibling::td
-${gtextDoB}       xpath=//td[text()='Date of Birth']/following-sibling::td
-${gtextSubjects}  xpath=//td[text()='Subjects']/following-sibling::td
-${gtextHobbies}   xpath=//td[text()='Hobbies']/following-sibling::td
-${gtextPicture}   xpath=//td[text()='Picture']/following-sibling::td
-${gtextAddress}   xpath=//td[text()='Address']/following-sibling::td
-${gtextSaC}       xpath=//td[text()='State and City']/following-sibling::td
-${gtextUserName}  xpath=//label[@id="userName-value"]
+${GtextName}        xpath=//td[text()='Student Name']/following-sibling::td
+${GtextEmail}       xpath=//td[text()='Student Email']/following-sibling::td
+${GtextGender}      xpath=//td[text()='Gender']/following-sibling::td
+${GtextMobile}      xpath=//td[text()='Mobile']/following-sibling::td
+${GtextDoB}         xpath=//td[text()='Date of Birth']/following-sibling::td
+${GtextSubjects}    xpath=//td[text()='Subjects']/following-sibling::td
+${GtextHobbies}     xpath=//td[text()='Hobbies']/following-sibling::td
+${GtextPicture}     xpath=//td[text()='Picture']/following-sibling::td
+${GtextAddress}     xpath=//td[text()='Address']/following-sibling::td
+${GtextSaC}         xpath=//td[text()='State and City']/following-sibling::td
+${GtextUserName}    xpath=//label[@id="userName-value"]
 # Values
-${FName}           Nguyễn
-${LName}           Châu
-${StudentName}     ${FName}${SPACE}${LName}
-${studentEmail}    mchau3801@gmail.com
-${Gender}          Male
-${Mobile}          0395929398
-${D}               03
-${M}               August
-${Y}               2001
-${D M Y}           ${D}${SPACE}${M}${SPACE}${Y}
-${Subject}         English 
-${Hobbies}         Sports
-${Picture}         mchau.jpg
-${Address}         155/5 Hoàng Văn Thụ
-${State&City}      NCR Delhi
-${userName}        mchau3802
-${Password}        Mchau06@
-${LinkPic}         D:/DEMOrobotframework/mchau.jpg
-${exAlertMessage}  User Register Successfully.
-@{fields}  ${gtextName} ${gtextGender} ${gtextMobile} ${gtextDoB} ${gtextSubjects} ${gtextHobbies} ${gtextPicture} ${gtextAddress} ${gtextSaC}
-@{values}  ${StudentName} ${Gender} ${Mobile} ${D M Y} ${Subject} ${Hobbies} ${Picture} ${Address} ${State&City}
+${FName}            Nguyễn
+${LName}            Châu
+${StudentName}      ${FName}${SPACE}${LName}
+${StudentEmail}     mchau3801@gmail.com
+${Gender}           Male
+${Mobile}           0395929398
+${D}                03
+${M}                August
+${Y}                2001
+${DoB}              03 August,2001
+${Subject}          English 
+${Hobbies}          Sports
+${Picture}          mchau.jpg
+${Address}          155/5 Hoàng Văn Thụ
+${State&City}       NCR Delhi
+${UserName}         mchau3801
+${Password}         Mchau06@
+${LinkPic}          D:/DEMOrobotframework/mchau.jpg
+${ExAlertMessage}   User Register Successfully.
+@{Fields}  ${GtextName} ${GtextGender} ${GtextMobile} ${GtextDoB} ${GtextSubjects} ${GtextHobbies} ${GtextPicture} ${GtextAddress} ${GtextSaC}
+@{Values}  ${StudentName} ${Gender} ${Mobile} ${DoB} ${Subject} ${Hobbies} ${Picture} ${Address} ${State&City}
