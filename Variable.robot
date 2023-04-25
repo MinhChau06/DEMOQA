@@ -63,7 +63,7 @@ ${Hobbies}          Sports
 ${Picture}          mchau.jpg
 ${Address}          155/5 Hoàng Văn Thụ
 ${State&City}       NCR Delhi
-${UserName}         mchau3801
+${UserName}         mchau3855
 ${Password}         Mchau06@
 ${LinkPic}          D:/DEMOrobotframework/mchau.jpg
 ${ExAlertMessage}   User Register Successfully.
